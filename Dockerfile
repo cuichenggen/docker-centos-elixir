@@ -18,8 +18,7 @@ RUN yum -y install epel-release && \
         openssl-devel \
         autoconf \
         wxBase.x86_64 \
-        wget \
-        git && \
+        wget && \
     yum clean all && \
     rm -rf /var/cache/yum
 
