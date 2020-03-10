@@ -8,6 +8,7 @@ RUN localedef -i en_US -f UTF-8 en_US.UTF-8 && locale
 RUN yum -y install epel-release && \
     yum -y update && \
     yum -y upgrade && \
+    yum -y install http://opensource.wandisco.com/centos/7/git/x86_64/git-2.22.0-1.WANdisco.437.x86_64.rpm && \
     yum -y install \
         gcc \
         gcc-c++ \
