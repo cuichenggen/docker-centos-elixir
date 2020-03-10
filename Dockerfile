@@ -5,10 +5,11 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8 && locale
 
-RUN yum -y install epel-release && \
+RUN curl https://setup.ius.io | sh && \
+    yum -y install epel-release && \
     yum -y update && \
     yum -y upgrade && \
-    yum -y install  https://centos7.iuscommunity.org/ius-release.rpm && \
+    yum -y install git2u && \
     yum -y install \
         gcc \
         gcc-c++ \
@@ -19,10 +20,9 @@ RUN yum -y install epel-release && \
         autoconf \
         wxBase.x86_64 \
         wget \
-        git2u-all && \
+        git2u && \
     yum clean all && \
     rm -rf /var/cache/yum
-
 
 # Install Erlang
 RUN wget http://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm && \
