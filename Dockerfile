@@ -8,6 +8,7 @@ RUN localedef -i en_US -f UTF-8 en_US.UTF-8 && locale
 RUN yum -y install epel-release && \
     yum -y update && \
     yum -y upgrade && \
+    yum -y install  https://centos7.iuscommunity.org/ius-release.rpm && \
     yum -y install \
         gcc \
         gcc-c++ \
@@ -18,7 +19,7 @@ RUN yum -y install epel-release && \
         autoconf \
         wxBase.x86_64 \
         wget \
-        git && \
+        git2u-all && \
     yum clean all && \
     rm -rf /var/cache/yum
 
