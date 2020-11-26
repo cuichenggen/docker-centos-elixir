@@ -7,6 +7,7 @@ RUN localedef -i en_US -f UTF-8 en_US.UTF-8 && locale
 
 RUN curl https://setup.ius.io | sh && \
     yum -y install epel-release && \
+    yum -y install https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.7-1.x86_64.rpm && \
     yum -y update && \
     yum -y upgrade && \
     yum -y install git2u && \
@@ -20,7 +21,7 @@ RUN curl https://setup.ius.io | sh && \
         autoconf \
         wxBase.x86_64 \
         wget \
-        git2u && \
+        git && \
     yum clean all && \
     rm -rf /var/cache/yum
 
