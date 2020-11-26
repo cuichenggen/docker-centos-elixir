@@ -10,7 +10,6 @@ RUN curl https://setup.ius.io | sh && \
     yum -y install https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.7-1.x86_64.rpm && \
     yum -y update && \
     yum -y upgrade && \
-    yum -y install git2u && \
     yum -y install \
         gcc \
         gcc-c++ \
