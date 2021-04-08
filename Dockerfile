@@ -37,6 +37,6 @@ RUN mkdir /opt/elixir && \
     ln -s /opt/elixir/bin/iex /usr/local/bin/iex && \
     ln -s /opt/elixir/bin/mix /usr/local/bin/mix && \
     ln -s /opt/elixir/bin/elixir /usr/local/bin/elixir && \
-    ln -s /opt/elixir/bin/elixirc /usr/local/bin/elixirc
-
+    ln -s /opt/elixir/bin/elixirc /usr/local/bin/elixirc && \
+    elixir -v
 CMD ["/bin/sh"]
