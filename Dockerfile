@@ -31,7 +31,7 @@ RUN wget http://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm 
 
 # Install Elixir
 RUN mkdir /opt/elixir && \
-    git clone -b v1.11 https://github.com/elixir-lang/elixir.git /opt/elixir && \
+    git clone -b v1.12 https://github.com/elixir-lang/elixir.git /opt/elixir && \
     cd /opt/elixir && \
     make clean test && \
     ln -s /opt/elixir/bin/iex /usr/local/bin/iex && \
